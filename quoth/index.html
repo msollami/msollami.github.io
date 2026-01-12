@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quoth the Raven - Guess Famous Quotes</title>
+    <meta name="description" content="Test your knowledge of famous quotes. Guess the missing word, identify the author, and build your streak.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-style: italic;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: white;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .feature {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .feature p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .quote-example {
+            background: white;
+            padding: 60px 40px;
+            margin: 60px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 32px;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .quote-blank {
+            display: inline-block;
+            min-width: 120px;
+            border-bottom: 3px solid #3498db;
+            margin: 0 5px;
+        }
+
+        .quote-author {
+            font-size: 20px;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .quote-text {
+                font-size: 24px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    QUOTH <span class="subtitle">the Raven</span>
+                </div>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="support.html">Support</a>
+                    <a href="privacy.html">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Guess the Quote,<br>Name the Author</h1>
+            <p>Test your knowledge of famous quotes from history's greatest minds. Complete the quote, identify the author, and build your streak.</p>
+            <a href="https://apps.apple.com/app/quoth-the-raven" class="cta-button">Download on the App Store</a>
+        </section>
+
+        <section class="quote-example">
+            <div class="quote-text">
+                "It does not do to dwell <span class="quote-blank">on</span> dreams and forget to live"
+            </div>
+            <div class="quote-author">— J.K. Rowling</div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>450+ Curated Quotes</h3>
+                <p>Explore quotes from philosophy, literature, and history's most influential thinkers.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Two-Part Challenge</h3>
+                <p>First guess the missing word, then identify who said it. Double the fun!</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🔥</div>
+                <h3>Build Your Streak</h3>
+                <p>Track your progress, maintain winning streaks, and improve your knowledge over time.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">❤️</div>
+                <h3>Save Favorites</h3>
+                <p>Bookmark quotes that resonate with you and revisit them anytime.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📖</div>
+                <h3>Learn Context</h3>
+                <p>Discover the story behind each quote with detailed context and themes.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Track Stats</h3>
+                <p>View your game history, best streaks, and see how you improve.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Michael Sollami. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="mailto:michael.sollami@bain.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
