@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrgMode - Organize Your Life as a Tree</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        h1 {
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .tagline {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        .cta {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 20px;
+            font-weight: 600;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        }
+        .features {
+            background: white;
+            padding: 80px 20px;
+        }
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1d1d1f;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            padding: 30px;
+            background: #f5f5f7;
+            border-radius: 12px;
+        }
+        .feature h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #667eea;
+        }
+        .feature p {
+            font-size: 18px;
+            color: #6e6e73;
+        }
+        .footer {
+            background: #f5f5f7;
+            padding: 40px 20px;
+            text-align: center;
+            color: #86868b;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>OrgMode</h1>
+        <p class="tagline">Organize your life as a tree structure</p>
+        <a href="https://apps.apple.com/app/orgmode/id" class="cta">Download on the Mac App Store</a>
+    </div>
+
+    <div class="features">
+        <div class="features-container">
+            <h2>Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>⌨️ Keyboard First</h3>
+                    <p>Navigate and edit at lightning speed with intuitive keyboard shortcuts designed for productivity.</p>
+                </div>
+                <div class="feature">
+                    <h3>🌳 Tree Structure</h3>
+                    <p>Organize notes hierarchically with unlimited nesting. Perfect for complex projects and deep thinking.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Beautiful Themes</h3>
+                    <p>Choose from carefully crafted color schemes including Sunset, Pond, and more.</p>
+                </div>
+                <div class="feature">
+                    <h3>✅ TODO Management</h3>
+                    <p>Track task states with visual indicators. Keep your projects moving forward.</p>
+                </div>
+                <div class="feature">
+                    <h3>🗺️ Minimap View</h3>
+                    <p>See your document structure at a glance. Never lose track of where you are.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Privacy First</h3>
+                    <p>All data stays on your Mac. No accounts, no tracking, no cloud sync required.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="orgmode-support.html">Support</a>
+            <a href="orgmode-support.html#privacy">Privacy</a>
+            <a href="mailto:michaelsollami@gmail.com">Contact</a>
+        </p>
+        <p style="margin-top: 20px;">© 2026 Michael Sollami. All rights reserved.</p>
+    </div>
+</body>
+</html>
